@@ -109,21 +109,6 @@
 						}
 					]
 				}
-			},
-			{
-				"name": "Wait 1 second",
-				"type": "Wait",
-				"dependsOn": [
-					{
-						"activity": "ForEachContainer",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"typeProperties": {
-					"waitTimeInSeconds": 1
-				}
 			}
 		],
 		"parameters": {
