@@ -17,6 +17,9 @@
 		"AzureBlobStorageSourceFileStore1_properties_typeProperties_folderPath": {
 			"value": "@dataset().folder"
 		},
+		"AzureKeyVault_ls_properties_typeProperties_baseUrl": {
+			"value": "https://azu-caes-dev-keyvault.vault.azure.net/"
+		},
 		"containerUri": {
 			"value": ""
 		},

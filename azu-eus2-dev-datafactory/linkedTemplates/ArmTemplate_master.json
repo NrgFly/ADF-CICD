@@ -23,6 +23,10 @@
 			"type": "string",
 			"defaultValue": "@dataset().folder"
 		},
+		"AzureKeyVault_ls_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://azu-caes-dev-keyvault.vault.azure.net/"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -52,6 +56,9 @@
 					},
 					"blob_storage_ls_connectionString": {
 						"value": "[parameters('blob_storage_ls_connectionString')]"
+					},
+					"AzureKeyVault_ls_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault_ls_properties_typeProperties_baseUrl')]"
 					},
 					"AzureBlobStorageSinkFileStore1_properties_typeProperties_fileName": {
 						"value": "[parameters('AzureBlobStorageSinkFileStore1_properties_typeProperties_fileName')]"
