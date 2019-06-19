@@ -11,15 +11,15 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'blob_storage_ls'"
 		},
-		"AzureBlobStorageSinkFileStore1_properties_typeProperties_fileName": {
+		"AzureBlobStorageSinkFileStore_properties_typeProperties_fileName": {
 			"type": "string",
 			"defaultValue": ""
 		},
-		"AzureBlobStorageSinkFileStore1_properties_typeProperties_folderPath": {
+		"AzureBlobStorageSinkFileStore_properties_typeProperties_folderPath": {
 			"type": "string",
 			"defaultValue": "@dataset().folder"
 		},
-		"AzureBlobStorageSourceFileStore1_properties_typeProperties_folderPath": {
+		"AzureBlobStorageSourceFileStore_properties_typeProperties_folderPath": {
 			"type": "string",
 			"defaultValue": "@dataset().folder"
 		},
@@ -33,7 +33,7 @@
 	},
 	"resources": [
 		{
-			"name": "[concat(parameters('factoryName'), '/CopyFilesfromMultipleContainers1')]",
+			"name": "[concat(parameters('factoryName'), '/CopyFilesfromMultipleContainers')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -54,7 +54,7 @@
 						"userProperties": [],
 						"typeProperties": {
 							"dataset": {
-								"referenceName": "AzureBlobStorageSourceFileStore1",
+								"referenceName": "AzureBlobStorageSourceFileStore",
 								"type": "DatasetReference",
 								"parameters": {
 									"folder": {
@@ -124,7 +124,7 @@
 									},
 									"inputs": [
 										{
-											"referenceName": "AzureBlobStorageSourceFileStore1",
+											"referenceName": "AzureBlobStorageSourceFileStore",
 											"type": "DatasetReference",
 											"parameters": {
 												"folder": {
@@ -136,7 +136,7 @@
 									],
 									"outputs": [
 										{
-											"referenceName": "AzureBlobStorageSinkFileStore1",
+											"referenceName": "AzureBlobStorageSinkFileStore",
 											"type": "DatasetReference",
 											"parameters": {
 												"folder": {
@@ -164,12 +164,12 @@
 				"annotations": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/AzureBlobStorageSourceFileStore1')]",
-				"[concat(variables('factoryId'), '/datasets/AzureBlobStorageSinkFileStore1')]"
+				"[concat(variables('factoryId'), '/datasets/AzureBlobStorageSourceFileStore')]",
+				"[concat(variables('factoryId'), '/datasets/AzureBlobStorageSinkFileStore')]"
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/AzureBlobStorageSinkFileStore1')]",
+			"name": "[concat(parameters('factoryName'), '/AzureBlobStorageSinkFileStore')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -186,9 +186,9 @@
 				"annotations": [],
 				"type": "AzureBlob",
 				"typeProperties": {
-					"fileName": "[parameters('AzureBlobStorageSinkFileStore1_properties_typeProperties_fileName')]",
+					"fileName": "[parameters('AzureBlobStorageSinkFileStore_properties_typeProperties_fileName')]",
 					"folderPath": {
-						"value": "[parameters('AzureBlobStorageSinkFileStore1_properties_typeProperties_folderPath')]",
+						"value": "[parameters('AzureBlobStorageSinkFileStore_properties_typeProperties_folderPath')]",
 						"type": "Expression"
 					}
 				}
@@ -198,7 +198,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/AzureBlobStorageSourceFileStore1')]",
+			"name": "[concat(parameters('factoryName'), '/AzureBlobStorageSourceFileStore')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -216,7 +216,7 @@
 				"type": "AzureBlob",
 				"typeProperties": {
 					"folderPath": {
-						"value": "[parameters('AzureBlobStorageSourceFileStore1_properties_typeProperties_folderPath')]",
+						"value": "[parameters('AzureBlobStorageSourceFileStore_properties_typeProperties_folderPath')]",
 						"type": "Expression"
 					}
 				}
@@ -246,10 +246,20 @@
 				"annotations": [],
 				"type": "AzureBlobStorage",
 				"typeProperties": {
-					"connectionString": "[parameters('blob_storage_ls_connectionString')]"
+					"connectionString": "[parameters('blob_storage_ls_connectionString')]",
+					"accountKey": {
+						"type": "AzureKeyVaultSecret",
+						"store": {
+							"referenceName": "AzureKeyVault_ls",
+							"type": "LinkedServiceReference"
+						},
+						"secretName": "blob-storage-key"
+					}
 				}
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureKeyVault_ls')]"
+			]
 		}
 	]
 }

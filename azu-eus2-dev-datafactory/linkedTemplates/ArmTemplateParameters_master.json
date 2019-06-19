@@ -8,13 +8,13 @@
 		"blob_storage_ls_connectionString": {
 			"value": ""
 		},
-		"AzureBlobStorageSinkFileStore1_properties_typeProperties_fileName": {
+		"AzureBlobStorageSinkFileStore_properties_typeProperties_fileName": {
 			"value": ""
 		},
-		"AzureBlobStorageSinkFileStore1_properties_typeProperties_folderPath": {
+		"AzureBlobStorageSinkFileStore_properties_typeProperties_folderPath": {
 			"value": "@dataset().folder"
 		},
-		"AzureBlobStorageSourceFileStore1_properties_typeProperties_folderPath": {
+		"AzureBlobStorageSourceFileStore_properties_typeProperties_folderPath": {
 			"value": "@dataset().folder"
 		},
 		"AzureKeyVault_ls_properties_typeProperties_baseUrl": {

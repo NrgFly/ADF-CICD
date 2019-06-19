@@ -11,15 +11,15 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'blob_storage_ls'"
 		},
-		"AzureBlobStorageSinkFileStore1_properties_typeProperties_fileName": {
+		"AzureBlobStorageSinkFileStore_properties_typeProperties_fileName": {
 			"type": "string",
 			"defaultValue": ""
 		},
-		"AzureBlobStorageSinkFileStore1_properties_typeProperties_folderPath": {
+		"AzureBlobStorageSinkFileStore_properties_typeProperties_folderPath": {
 			"type": "string",
 			"defaultValue": "@dataset().folder"
 		},
-		"AzureBlobStorageSourceFileStore1_properties_typeProperties_folderPath": {
+		"AzureBlobStorageSourceFileStore_properties_typeProperties_folderPath": {
 			"type": "string",
 			"defaultValue": "@dataset().folder"
 		},
@@ -60,14 +60,14 @@
 					"AzureKeyVault_ls_properties_typeProperties_baseUrl": {
 						"value": "[parameters('AzureKeyVault_ls_properties_typeProperties_baseUrl')]"
 					},
-					"AzureBlobStorageSinkFileStore1_properties_typeProperties_fileName": {
-						"value": "[parameters('AzureBlobStorageSinkFileStore1_properties_typeProperties_fileName')]"
+					"AzureBlobStorageSinkFileStore_properties_typeProperties_fileName": {
+						"value": "[parameters('AzureBlobStorageSinkFileStore_properties_typeProperties_fileName')]"
 					},
-					"AzureBlobStorageSinkFileStore1_properties_typeProperties_folderPath": {
-						"value": "[parameters('AzureBlobStorageSinkFileStore1_properties_typeProperties_folderPath')]"
+					"AzureBlobStorageSinkFileStore_properties_typeProperties_folderPath": {
+						"value": "[parameters('AzureBlobStorageSinkFileStore_properties_typeProperties_folderPath')]"
 					},
-					"AzureBlobStorageSourceFileStore1_properties_typeProperties_folderPath": {
-						"value": "[parameters('AzureBlobStorageSourceFileStore1_properties_typeProperties_folderPath')]"
+					"AzureBlobStorageSourceFileStore_properties_typeProperties_folderPath": {
+						"value": "[parameters('AzureBlobStorageSourceFileStore_properties_typeProperties_folderPath')]"
 					}
 				}
 			},
