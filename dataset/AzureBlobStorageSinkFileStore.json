@@ -1,7 +1,7 @@
 {
-	"name": "AzureBlobStorageSourceFileStore1",
+	"name": "AzureBlobStorageSinkFileStore",
 	"properties": {
-		"description": "Connection to your source data store.",
+		"description": "Connection to your destination data store.",
 		"linkedServiceName": {
 			"referenceName": "blob_storage_ls",
 			"type": "LinkedServiceReference"
@@ -13,6 +13,7 @@
 		},
 		"type": "AzureBlob",
 		"typeProperties": {
+			"fileName": "",
 			"folderPath": {
 				"value": "@dataset().folder",
 				"type": "Expression"
