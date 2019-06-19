@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "azu-eus2-dev-datafactory"
+		},
+		"blob_storage_ls_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorageSinkFileStore1_properties_typeProperties_fileName": {
+			"value": ""
+		},
+		"AzureBlobStorageSinkFileStore1_properties_typeProperties_folderPath": {
+			"value": "@dataset().folder"
+		},
+		"AzureBlobStorageSourceFileStore1_properties_typeProperties_folderPath": {
+			"value": "@dataset().folder"
+		}
+	}
+}
