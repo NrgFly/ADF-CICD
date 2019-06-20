@@ -1,5 +1,5 @@
 {
-	"name": "ADF_Copy_pl",
+	"name": "ADF_PASS_Demo_pl",
 	"properties": {
 		"description": "Copy all files across multiple containers or buckets from one file-based storage store to another",
 		"activities": [
@@ -135,21 +135,6 @@
 					"timeout": "7.00:00:00",
 					"sleep": 10,
 					"childItems": true
-				}
-			},
-			{
-				"name": "Wait 1 second",
-				"type": "Wait",
-				"dependsOn": [
-					{
-						"activity": "ForEachContainer",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"typeProperties": {
-					"waitTimeInSeconds": 1
 				}
 			}
 		],
