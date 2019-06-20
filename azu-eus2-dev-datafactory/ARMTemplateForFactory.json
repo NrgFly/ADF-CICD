@@ -33,7 +33,7 @@
 	},
 	"resources": [
 		{
-			"name": "[concat(parameters('factoryName'), '/ADF_CopyData_pl')]",
+			"name": "[concat(parameters('factoryName'), '/ADF_Copy_pl')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -45,7 +45,7 @@
 						"type": "GetMetadata",
 						"dependsOn": [
 							{
-								"activity": "Check if Source Exists",
+								"activity": "Check if Source exists",
 								"dependencyConditions": [
 									"Succeeded"
 								]
@@ -158,7 +158,7 @@
 						}
 					},
 					{
-						"name": "Check if Source Exists",
+						"name": "Check if Source exists",
 						"type": "Validation",
 						"dependsOn": [],
 						"userProperties": [],
