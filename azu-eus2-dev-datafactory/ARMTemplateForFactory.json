@@ -33,7 +33,7 @@
 	},
 	"resources": [
 		{
-			"name": "[concat(parameters('factoryName'), '/ADF_Copy_pl')]",
+			"name": "[concat(parameters('factoryName'), '/ADF_PASS_Demo_pl')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -177,22 +177,6 @@
 							"sleep": 10,
 							"childItems": true
 						}
-					},
-					{
-						"name": "Wait 1 second",
-						"type": "Wait",
-						"dependsOn": [
-							{
-								"activity": "ForEachContainer",
-								"dependencyConditions": [
-									"Succeeded"
-								]
-							}
-						],
-						"userProperties": [],
-						"typeProperties": {
-							"waitTimeInSeconds": 1
-						}
 					}
 				],
 				"parameters": {
@@ -328,22 +312,6 @@
 									]
 								}
 							]
-						}
-					},
-					{
-						"name": "Wait 5 seconds",
-						"type": "Wait",
-						"dependsOn": [
-							{
-								"activity": "ForEachContainer",
-								"dependencyConditions": [
-									"Succeeded"
-								]
-							}
-						],
-						"userProperties": [],
-						"typeProperties": {
-							"waitTimeInSeconds": 1
 						}
 					}
 				],
