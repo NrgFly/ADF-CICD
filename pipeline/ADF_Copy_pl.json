@@ -1,5 +1,5 @@
 {
-	"name": "ADF_CopyData_pl",
+	"name": "ADF_Copy_pl",
 	"properties": {
 		"description": "Copy all files across multiple containers or buckets from one file-based storage store to another",
 		"activities": [
@@ -9,7 +9,7 @@
 				"type": "GetMetadata",
 				"dependsOn": [
 					{
-						"activity": "Check if Source Exists",
+						"activity": "Check if Source exists",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -119,7 +119,7 @@
 				}
 			},
 			{
-				"name": "Check if Source Exists",
+				"name": "Check if Source exists",
 				"type": "Validation",
 				"typeProperties": {
 					"dataset": {
