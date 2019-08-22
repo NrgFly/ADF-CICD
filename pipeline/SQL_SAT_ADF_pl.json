@@ -141,6 +141,22 @@
 					"sleep": 10,
 					"childItems": true
 				}
+			},
+			{
+				"name": "Wait 5 seconds",
+				"type": "Wait",
+				"dependsOn": [
+					{
+						"activity": "ForEachContainer",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 5
+				}
 			}
 		],
 		"parameters": {
