@@ -2,7 +2,7 @@
 	"name": "ADF_time_trigger",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Stopped",
+		"runtimeState": "Started",
 		"pipeline": {
 			"pipelineReference": {
 				"referenceName": "ADF_SQL_pl",
