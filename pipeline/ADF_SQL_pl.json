@@ -142,7 +142,7 @@
 				}
 			},
 			{
-				"name": "Wait 5 sec",
+				"name": "Wait 1 sec",
 				"type": "Wait",
 				"dependsOn": [
 					{
@@ -154,7 +154,7 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
-					"waitTimeInSeconds": 5
+					"waitTimeInSeconds": 1
 				}
 			}
 		],
