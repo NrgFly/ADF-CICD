@@ -4,7 +4,7 @@
 	"parameters": {
 		"factoryName": {
 			"type": "string",
-			"metadata": "Data Factory Name",
+			"metadata": "Data Factory name",
 			"defaultValue": "azu-eus2-dev-datafactory"
 		},
 		"blob_storage_ls_connectionString": {
@@ -271,7 +271,7 @@
 						}
 					},
 					{
-						"name": "Wait 5 sec",
+						"name": "Wait 1 sec",
 						"type": "Wait",
 						"dependsOn": [
 							{
@@ -283,7 +283,7 @@
 						],
 						"userProperties": [],
 						"typeProperties": {
-							"waitTimeInSeconds": 5
+							"waitTimeInSeconds": 1
 						}
 					}
 				],
