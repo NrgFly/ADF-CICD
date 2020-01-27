@@ -1,4 +1,3 @@
-
 param
 (
     [parameter(Mandatory = $false)] [String] $rootFolder,
