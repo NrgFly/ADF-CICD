@@ -11,6 +11,22 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'blob_storage_ls'"
 		},
+		"ADF_SQL_pl_properties_0_name": {
+			"type": "string",
+			"defaultValue": "EnumerateContainersList"
+		},
+		"ADF_SQL_pl_properties_1_name": {
+			"type": "string",
+			"defaultValue": "ForEachContainer"
+		},
+		"ADF_SQL_pl_properties_2_name": {
+			"type": "string",
+			"defaultValue": "Validation_File"
+		},
+		"ADF_SQL_pl_properties_3_name": {
+			"type": "string",
+			"defaultValue": "Wait 1 sec"
+		},
 		"ADF_SQL_pl_properties_3_typeProperties": {
 			"type": "number",
 			"defaultValue": 1
@@ -72,6 +88,18 @@
 					},
 					"AzureBlobStorageSourceFileStore_properties_typeProperties_folderPath": {
 						"value": "[parameters('AzureBlobStorageSourceFileStore_properties_typeProperties_folderPath')]"
+					},
+					"ADF_SQL_pl_properties_0_name": {
+						"value": "[parameters('ADF_SQL_pl_properties_0_name')]"
+					},
+					"ADF_SQL_pl_properties_1_name": {
+						"value": "[parameters('ADF_SQL_pl_properties_1_name')]"
+					},
+					"ADF_SQL_pl_properties_2_name": {
+						"value": "[parameters('ADF_SQL_pl_properties_2_name')]"
+					},
+					"ADF_SQL_pl_properties_3_name": {
+						"value": "[parameters('ADF_SQL_pl_properties_3_name')]"
 					},
 					"ADF_SQL_pl_properties_3_typeProperties": {
 						"value": "[parameters('ADF_SQL_pl_properties_3_typeProperties')]"

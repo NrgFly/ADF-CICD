@@ -11,6 +11,22 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'blob_storage_ls'"
 		},
+		"ADF_SQL_pl_properties_0_name": {
+			"type": "string",
+			"defaultValue": "EnumerateContainersList"
+		},
+		"ADF_SQL_pl_properties_1_name": {
+			"type": "string",
+			"defaultValue": "ForEachContainer"
+		},
+		"ADF_SQL_pl_properties_2_name": {
+			"type": "string",
+			"defaultValue": "Validation_File"
+		},
+		"ADF_SQL_pl_properties_3_name": {
+			"type": "string",
+			"defaultValue": "Wait 1 sec"
+		},
 		"ADF_SQL_pl_properties_3_typeProperties": {
 			"type": "number",
 			"defaultValue": 1
@@ -44,7 +60,7 @@
 				"description": "Copy all files across multiple containers or buckets from one file-based storage store to another",
 				"activities": [
 					{
-						"name": "EnumerateContainersList",
+						"name": "[parameters('ADF_SQL_pl_properties_0_name')]",
 						"description": "Scan the file path on your source storage store and get the container list.",
 						"type": "GetMetadata",
 						"dependsOn": [
@@ -80,7 +96,7 @@
 						}
 					},
 					{
-						"name": "ForEachContainer",
+						"name": "[parameters('ADF_SQL_pl_properties_1_name')]",
 						"description": "Get the container list from Metadata activity and then iterates each of them to Copy activity.",
 						"type": "ForEach",
 						"dependsOn": [
@@ -162,7 +178,7 @@
 						}
 					},
 					{
-						"name": "Validation_File",
+						"name": "[parameters('ADF_SQL_pl_properties_2_name')]",
 						"type": "Validation",
 						"dependsOn": [],
 						"userProperties": [],
@@ -182,7 +198,7 @@
 						}
 					},
 					{
-						"name": "Wait 1 sec",
+						"name": "[parameters('ADF_SQL_pl_properties_3_name')]",
 						"type": "Wait",
 						"dependsOn": [
 							{
