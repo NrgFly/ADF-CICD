@@ -11,6 +11,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'blob_storage_ls'"
 		},
+		"ADF_SQL_pl_properties_3_typeProperties": {
+			"type": "number",
+			"defaultValue": 1
+		},
 		"AzureBlobStorageSinkFileStore_properties_typeProperties_fileName": {
 			"type": "string",
 			"defaultValue": ""
@@ -68,6 +72,9 @@
 					},
 					"AzureBlobStorageSourceFileStore_properties_typeProperties_folderPath": {
 						"value": "[parameters('AzureBlobStorageSourceFileStore_properties_typeProperties_folderPath')]"
+					},
+					"ADF_SQL_pl_properties_3_typeProperties": {
+						"value": "[parameters('ADF_SQL_pl_properties_3_typeProperties')]"
 					}
 				}
 			},

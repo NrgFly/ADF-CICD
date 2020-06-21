@@ -8,6 +8,9 @@
 		"blob_storage_ls_connectionString": {
 			"value": ""
 		},
+		"ADF_SQL_pl_properties_3_typeProperties": {
+			"value": 1
+		},
 		"AzureBlobStorageSinkFileStore_properties_typeProperties_fileName": {
 			"value": ""
 		},
