@@ -160,12 +160,10 @@
 		],
 		"parameters": {
 			"SourceFilePath": {
-				"type": "String",
-				"defaultValue": "/storesales-source"
+				"type": "String"
 			},
 			"DestinationFilePath": {
-				"type": "String",
-				"defaultValue": "/storesales-staging"
+				"type": "String"
 			}
 		},
 		"annotations": []
