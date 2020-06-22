@@ -56,6 +56,13 @@
 				"type": "String",
 				"defaultValue": "/storesales-staging"
 			}
+		},
+		"ADF_SQL_pl_properties_parameters_waitTimeInSeconds": {
+			"type": "object",
+			"defaultValue": {
+				"type": "int",
+				"defaultValue": 1
+			}
 		}
 	},
 	"variables": {
@@ -313,13 +320,17 @@
 						],
 						"userProperties": [],
 						"typeProperties": {
-							"waitTimeInSeconds": 1
+							"waitTimeInSeconds": {
+								"value": "@pipeline().parameters.waitTimeInSeconds",
+								"type": "Expression"
+							}
 						}
 					}
 				],
 				"parameters": {
 					"SourceFilePath": "[parameters('ADF_SQL_pl_properties_parameters_SourceFilePath')]",
-					"DestinationFilePath": "[parameters('ADF_SQL_pl_properties_parameters_DestinationFilePath')]"
+					"DestinationFilePath": "[parameters('ADF_SQL_pl_properties_parameters_DestinationFilePath')]",
+					"waitTimeInSeconds": "[parameters('ADF_SQL_pl_properties_parameters_waitTimeInSeconds')]"
 				},
 				"annotations": []
 			},

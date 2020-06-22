@@ -32,6 +32,12 @@
 				"defaultValue": "/storesales-staging"
 			}
 		},
+		"ADF_SQL_pl_properties_parameters_waitTimeInSeconds": {
+			"value": {
+				"type": "int",
+				"defaultValue": 1
+			}
+		},
 		"AzureBlobStorageSinkFileStore_properties_typeProperties_fileName": {
 			"value": ""
 		},
