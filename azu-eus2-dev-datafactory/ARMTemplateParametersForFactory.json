@@ -20,24 +20,6 @@
 		"ADF_SQL_pl_properties_3_name": {
 			"value": "Wait 1 sec"
 		},
-		"ADF_SQL_pl_properties_parameters_SourceFilePath": {
-			"value": {
-				"type": "String",
-				"defaultValue": "/storesales-source"
-			}
-		},
-		"ADF_SQL_pl_properties_parameters_DestinationFilePath": {
-			"value": {
-				"type": "String",
-				"defaultValue": "/storesales-staging"
-			}
-		},
-		"ADF_SQL_pl_properties_parameters_waitTimeInSeconds": {
-			"value": {
-				"type": "int",
-				"defaultValue": 1
-			}
-		},
 		"AzureBlobStorageSinkFileStore_properties_typeProperties_fileName": {
 			"value": ""
 		},

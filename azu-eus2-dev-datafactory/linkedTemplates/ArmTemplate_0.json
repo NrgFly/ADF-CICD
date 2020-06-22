@@ -42,27 +42,6 @@
 		"ADF_SQL_pl_properties_3_name": {
 			"type": "string",
 			"defaultValue": "Wait 1 sec"
-		},
-		"ADF_SQL_pl_properties_parameters_SourceFilePath": {
-			"type": "object",
-			"defaultValue": {
-				"type": "String",
-				"defaultValue": "/storesales-source"
-			}
-		},
-		"ADF_SQL_pl_properties_parameters_DestinationFilePath": {
-			"type": "object",
-			"defaultValue": {
-				"type": "String",
-				"defaultValue": "/storesales-staging"
-			}
-		},
-		"ADF_SQL_pl_properties_parameters_waitTimeInSeconds": {
-			"type": "object",
-			"defaultValue": {
-				"type": "int",
-				"defaultValue": 1
-			}
 		}
 	},
 	"variables": {
@@ -328,9 +307,18 @@
 					}
 				],
 				"parameters": {
-					"SourceFilePath": "[parameters('ADF_SQL_pl_properties_parameters_SourceFilePath')]",
-					"DestinationFilePath": "[parameters('ADF_SQL_pl_properties_parameters_DestinationFilePath')]",
-					"waitTimeInSeconds": "[parameters('ADF_SQL_pl_properties_parameters_waitTimeInSeconds')]"
+					"SourceFilePath": {
+						"type": "String",
+						"defaultValue": "/storesales-source"
+					},
+					"DestinationFilePath": {
+						"type": "String",
+						"defaultValue": "/storesales-staging"
+					},
+					"waitTimeInSeconds": {
+						"type": "int",
+						"defaultValue": 1
+					}
 				},
 				"annotations": []
 			},
