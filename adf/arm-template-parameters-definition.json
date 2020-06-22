@@ -8,7 +8,18 @@
             }
         }
     },
-    "Microsoft.DataFactory/factories/pipelines": {},
+    "Microsoft.DataFactory/factories/pipelines": {
+        "properties": {
+            "activities": [{
+                "name": "="
+            }],
+            "parameters": {
+                    "*": {
+                        "defaultValue": "="
+                    }
+            }
+        }
+    },
     "Microsoft.DataFactory/factories/integrationRuntimes": {
         "properties": {
             "typeProperties": {
