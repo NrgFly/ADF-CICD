@@ -14,7 +14,7 @@
                 "name": "="
             }],
             "parameters": {
-                    "defaultValue": {
+                    "*": {
                         "defaultValue": "="
                     }
             }
