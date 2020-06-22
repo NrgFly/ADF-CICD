@@ -26,34 +26,6 @@
 		"AzureBlobStorageSourceFileStore_properties_typeProperties_folderPath": {
 			"type": "string",
 			"defaultValue": "@dataset().folder"
-		},
-		"ADF_SQL_pl_properties_0_name": {
-			"type": "string",
-			"defaultValue": "EnumerateContainersList"
-		},
-		"ADF_SQL_pl_properties_1_name": {
-			"type": "string",
-			"defaultValue": "ForEachContainer"
-		},
-		"ADF_SQL_pl_properties_2_name": {
-			"type": "string",
-			"defaultValue": "Validation_File"
-		},
-		"ADF_SQL_pl_properties_3_name": {
-			"type": "string",
-			"defaultValue": "Wait 1 sec"
-		},
-		"ADF_SQL_pl_properties_parameters_SourceFilePath_defaultValue": {
-			"type": "string",
-			"defaultValue": "/storesales-source"
-		},
-		"ADF_SQL_pl_properties_parameters_DestinationFilePath_defaultValue": {
-			"type": "string",
-			"defaultValue": "/storesales-staging"
-		},
-		"ADF_SQL_pl_properties_parameters_waitTimeInSeconds_defaultValue": {
-			"type": "int",
-			"defaultValue": 1
 		}
 	},
 	"variables": {
@@ -161,7 +133,7 @@
 				"description": "Copy all files across multiple containers or buckets from one file-based storage store to another",
 				"activities": [
 					{
-						"name": "[parameters('ADF_SQL_pl_properties_0_name')]",
+						"name": "EnumerateContainersList",
 						"description": "Scan the file path on your source storage store and get the container list.",
 						"type": "GetMetadata",
 						"dependsOn": [
@@ -197,7 +169,7 @@
 						}
 					},
 					{
-						"name": "[parameters('ADF_SQL_pl_properties_1_name')]",
+						"name": "ForEachContainer",
 						"description": "Get the container list from Metadata activity and then iterates each of them to Copy activity.",
 						"type": "ForEach",
 						"dependsOn": [
@@ -279,7 +251,7 @@
 						}
 					},
 					{
-						"name": "[parameters('ADF_SQL_pl_properties_2_name')]",
+						"name": "Validation_File",
 						"type": "Validation",
 						"dependsOn": [],
 						"userProperties": [],
@@ -299,7 +271,7 @@
 						}
 					},
 					{
-						"name": "[parameters('ADF_SQL_pl_properties_3_name')]",
+						"name": "Wait 1 sec",
 						"type": "Wait",
 						"dependsOn": [
 							{
@@ -321,15 +293,15 @@
 				"parameters": {
 					"SourceFilePath": {
 						"type": "String",
-						"defaultValue": "[parameters('ADF_SQL_pl_properties_parameters_SourceFilePath_defaultValue')]"
+						"defaultValue": "/storesales-source"
 					},
 					"DestinationFilePath": {
 						"type": "String",
-						"defaultValue": "[parameters('ADF_SQL_pl_properties_parameters_DestinationFilePath_defaultValue')]"
+						"defaultValue": "/storesales-staging"
 					},
 					"waitTimeInSeconds": {
 						"type": "int",
-						"defaultValue": "[parameters('ADF_SQL_pl_properties_parameters_waitTimeInSeconds_defaultValue')]"
+						"defaultValue": 1
 					}
 				},
 				"annotations": []
