@@ -8,6 +8,27 @@
 		"blob_storage_ls_connectionString": {
 			"value": ""
 		},
+		"ADF_SQL_pl_properties_0_name": {
+			"value": "EnumerateContainersList"
+		},
+		"ADF_SQL_pl_properties_1_name": {
+			"value": "ForEachContainer"
+		},
+		"ADF_SQL_pl_properties_2_name": {
+			"value": "Validation_File"
+		},
+		"ADF_SQL_pl_properties_3_name": {
+			"value": "Wait 1 sec"
+		},
+		"ADF_SQL_pl_properties_parameters_SourceFilePath_defaultValue": {
+			"value": "/storesales-source"
+		},
+		"ADF_SQL_pl_properties_parameters_DestinationFilePath_defaultValue": {
+			"value": "/storesales-staging"
+		},
+		"ADF_SQL_pl_properties_parameters_waitTimeInSeconds_defaultValue": {
+			"value": 1
+		},
 		"AzureBlobStorageSinkFileStore_properties_typeProperties_fileName": {
 			"value": ""
 		},

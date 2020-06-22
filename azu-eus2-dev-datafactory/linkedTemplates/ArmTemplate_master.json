@@ -11,6 +11,34 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'blob_storage_ls'"
 		},
+		"ADF_SQL_pl_properties_0_name": {
+			"type": "string",
+			"defaultValue": "EnumerateContainersList"
+		},
+		"ADF_SQL_pl_properties_1_name": {
+			"type": "string",
+			"defaultValue": "ForEachContainer"
+		},
+		"ADF_SQL_pl_properties_2_name": {
+			"type": "string",
+			"defaultValue": "Validation_File"
+		},
+		"ADF_SQL_pl_properties_3_name": {
+			"type": "string",
+			"defaultValue": "Wait 1 sec"
+		},
+		"ADF_SQL_pl_properties_parameters_SourceFilePath_defaultValue": {
+			"type": "string",
+			"defaultValue": "/storesales-source"
+		},
+		"ADF_SQL_pl_properties_parameters_DestinationFilePath_defaultValue": {
+			"type": "string",
+			"defaultValue": "/storesales-staging"
+		},
+		"ADF_SQL_pl_properties_parameters_waitTimeInSeconds_defaultValue": {
+			"type": "int",
+			"defaultValue": 1
+		},
 		"AzureBlobStorageSinkFileStore_properties_typeProperties_fileName": {
 			"type": "string",
 			"defaultValue": ""
@@ -68,6 +96,27 @@
 					},
 					"AzureBlobStorageSourceFileStore_properties_typeProperties_folderPath": {
 						"value": "[parameters('AzureBlobStorageSourceFileStore_properties_typeProperties_folderPath')]"
+					},
+					"ADF_SQL_pl_properties_0_name": {
+						"value": "[parameters('ADF_SQL_pl_properties_0_name')]"
+					},
+					"ADF_SQL_pl_properties_1_name": {
+						"value": "[parameters('ADF_SQL_pl_properties_1_name')]"
+					},
+					"ADF_SQL_pl_properties_2_name": {
+						"value": "[parameters('ADF_SQL_pl_properties_2_name')]"
+					},
+					"ADF_SQL_pl_properties_3_name": {
+						"value": "[parameters('ADF_SQL_pl_properties_3_name')]"
+					},
+					"ADF_SQL_pl_properties_parameters_SourceFilePath_defaultValue": {
+						"value": "[parameters('ADF_SQL_pl_properties_parameters_SourceFilePath_defaultValue')]"
+					},
+					"ADF_SQL_pl_properties_parameters_DestinationFilePath_defaultValue": {
+						"value": "[parameters('ADF_SQL_pl_properties_parameters_DestinationFilePath_defaultValue')]"
+					},
+					"ADF_SQL_pl_properties_parameters_waitTimeInSeconds_defaultValue": {
+						"value": "[parameters('ADF_SQL_pl_properties_parameters_waitTimeInSeconds_defaultValue')]"
 					}
 				}
 			},
