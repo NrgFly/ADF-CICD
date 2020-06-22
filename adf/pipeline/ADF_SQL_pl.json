@@ -154,7 +154,10 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
-					"waitTimeInSeconds": 1
+					"waitTimeInSeconds": {
+						"value": "@pipeline().parameters.waitTimeInSeconds",
+						"type": "Expression"
+					}
 				}
 			}
 		],
@@ -166,6 +169,10 @@
 			"DestinationFilePath": {
 				"type": "String",
 				"defaultValue": "/storesales-staging"
+			},
+			"waitTimeInSeconds": {
+				"type": "int",
+				"defaultValue": 1
 			}
 		},
 		"annotations": []
