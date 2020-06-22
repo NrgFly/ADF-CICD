@@ -28,8 +28,7 @@
 			"defaultValue": "Wait 1 sec"
 		},
 		"ADF_SQL_pl_properties_3_typeProperties": {
-			"type": "number",
-			"defaultValue": 1
+			"type": "number"
 		},
 		"AzureBlobStorageSinkFileStore_properties_typeProperties_fileName": {
 			"type": "string",

@@ -21,7 +21,7 @@
 			"value": "Wait 1 sec"
 		},
 		"ADF_SQL_pl_properties_3_typeProperties": {
-			"value": 1
+			"value": ""
 		},
 		"AzureBlobStorageSinkFileStore_properties_typeProperties_fileName": {
 			"value": ""

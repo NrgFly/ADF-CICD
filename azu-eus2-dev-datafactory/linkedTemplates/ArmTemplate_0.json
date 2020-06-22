@@ -44,8 +44,7 @@
 			"defaultValue": "Wait 1 sec"
 		},
 		"ADF_SQL_pl_properties_3_typeProperties": {
-			"type": "number",
-			"defaultValue": 1
+			"type": "number"
 		}
 	},
 	"variables": {
