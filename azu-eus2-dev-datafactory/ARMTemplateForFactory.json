@@ -27,6 +27,18 @@
 			"type": "string",
 			"defaultValue": "Wait 1 sec"
 		},
+		"ADF_SQL_pl_properties_parameters_SourceFilePath_defaultValue": {
+			"type": "string",
+			"defaultValue": "/storesales-source"
+		},
+		"ADF_SQL_pl_properties_parameters_DestinationFilePath_defaultValue": {
+			"type": "string",
+			"defaultValue": "/storesales-staging"
+		},
+		"ADF_SQL_pl_properties_parameters_waitTimeInSeconds_defaultValue": {
+			"type": "int",
+			"defaultValue": 1
+		},
 		"AzureBlobStorageSinkFileStore_properties_typeProperties_fileName": {
 			"type": "string",
 			"defaultValue": ""
@@ -216,15 +228,15 @@
 				"parameters": {
 					"SourceFilePath": {
 						"type": "String",
-						"defaultValue": "/storesales-source"
+						"defaultValue": "[parameters('ADF_SQL_pl_properties_parameters_SourceFilePath_defaultValue')]"
 					},
 					"DestinationFilePath": {
 						"type": "String",
-						"defaultValue": "/storesales-staging"
+						"defaultValue": "[parameters('ADF_SQL_pl_properties_parameters_DestinationFilePath_defaultValue')]"
 					},
 					"waitTimeInSeconds": {
 						"type": "int",
-						"defaultValue": 1
+						"defaultValue": "[parameters('ADF_SQL_pl_properties_parameters_waitTimeInSeconds_defaultValue')]"
 					}
 				},
 				"annotations": []
