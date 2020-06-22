@@ -12,7 +12,10 @@
         "properties": {
             "activities": [{
                 "name": "="
-            }]
+            }],
+            "parameters": {
+                    "*": "="
+            }
         }
     },
     "Microsoft.DataFactory/factories/integrationRuntimes": {
